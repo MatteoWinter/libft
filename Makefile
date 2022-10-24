@@ -6,7 +6,7 @@ CFLAGS		= -Wall -Wextra -Werror
 
 INCLUDE		= -I include/
 
-FCN			= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_tolower.c ft_toupper.c ft_memset.c
+FCN			= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_tolower.c ft_toupper.c ft_memset.c ft_bzero.c
 
 FCNF		= ./
 
