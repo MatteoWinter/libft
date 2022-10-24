@@ -1,4 +1,6 @@
 .git_old
+.gitignore
+tools
 
 # OSX
 .DS_Store
