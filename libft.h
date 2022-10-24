@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:49:29 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/24 21:59:27 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/24 23:40:26 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,19 @@
 
 // --- char ---
 // check
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 
 // modification
-int	ft_toupper(int c);
-int	ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 // --- str ---
-int	ft_strlen(char *str);
+size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 // --- mem ---
 void	ft_bzero(void *s, size_t n);
