@@ -1,8 +1,5 @@
-.git_old
-./.gitignore
-./libft.pdf
-
-./tools/*
+.ignored
+.gitignore
 
 # OSX
 .DS_Store
