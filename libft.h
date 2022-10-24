@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:49:29 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/24 23:40:26 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/24 23:57:11 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_tolower(int c);
 // --- str ---
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 // --- mem ---
 void	ft_bzero(void *s, size_t n);
