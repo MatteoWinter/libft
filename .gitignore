@@ -1,6 +1,6 @@
 .git_old
 ./.gitignore
-./tools
+tools
 ./libft.pdf
 
 # OSX
