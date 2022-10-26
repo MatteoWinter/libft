@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:49:29 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/26 21:08:34 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/26 22:15:29 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stddef.h>
 # include <stdlib.h>
+# include <limits.h>
 
 // --- chr ---
 int		ft_isalpha(int c);
