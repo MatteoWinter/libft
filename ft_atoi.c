@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 04:54:02 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/26 20:58:54 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/26 21:00:45 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (i * sign);
 }
-/*
-#include <stdio.h>
-
-int main (void)
-{
-	printf("ft_: %i\n", ft_atoi("\t\v\f\r\n \f- \f\t\n\r    06050"));
-	printf("ori: %i\n", atoi("\t\v\f\r\n \f- \f\t\n\r    06050"));
-	printf("ft_: %i\n", ft_atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
-	printf("ori: %i\n", atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
-}
-*/
