@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 23:43:53 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/26 23:17:29 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/26 23:19:42 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_len;
 
 	i = 0;
-	if (src == NULL)
+	if (size == 0)
 		return (0);
 	dst_len = ft_strlen(dst);
 	if (size <= dst_len)
