@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 04:54:02 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/26 04:55:20 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:58:54 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,38 @@
 
 int	ft_atoi(const char *nptr)
 {
+	int	i;
+	int	sign;
 
+	i = 0;
+	sign = 1;
+	while (((8 < *nptr && *nptr < 14) || *nptr == ' ') && *nptr != '\0')
+		nptr++;
+	if (*nptr == '-')
+	{
+		sign *= -1;
+		nptr++;
+	}
+	else if (*nptr == '+')
+		nptr++;
+	while ((47 < *nptr && *nptr < 58) && *nptr != '\0')
+	{
+		i += *nptr - 48;
+		nptr++;
+		if (*nptr == '\0' || !(47 < *nptr && *nptr < 58))
+			break ;
+		i *= 10;
+	}
+	return (i * sign);
 }
+/*
+#include <stdio.h>
+
+int main (void)
+{
+	printf("ft_: %i\n", ft_atoi("\t\v\f\r\n \f- \f\t\n\r    06050"));
+	printf("ori: %i\n", atoi("\t\v\f\r\n \f- \f\t\n\r    06050"));
+	printf("ft_: %i\n", ft_atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
+	printf("ori: %i\n", atoi("\t\v\f\r\n \f+\t\v\f\r\n \f1234"));
+}
+*/
