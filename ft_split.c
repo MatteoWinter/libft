@@ -6,30 +6,18 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:10:14 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/27 22:46:37 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/27 23:20:44 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+size_t	word_count(const char *s, char c)
 {
 	size_t	i;
-	size_t	j;
 	size_t	w;
-	char	**p;
 
-	// edge cases
-	if (s == NULL || c == '\0' || *s == '\0')
-	{
-		p = malloc(sizeof(char **));
-		p[0] = NULL;
-		return (p);
-	}
-
-	// count words
 	i = 0;
-	j = 0;
 	w = 0;
 	while (s[i++])
 	{
@@ -41,13 +29,16 @@ char	**ft_split(char const *s, char c)
 			i++;
 		w++;
 	}
+	return (w);
+}
 
-	p = malloc(sizeof(char *) * (w + 1));
-	if (p == NULL)
-		return (NULL);
+char	**splitter(const char *s, char c, char **p, size_t w)
+{
+	size_t	i;
+	size_t	j;
+
 	i = 0;
-
-	// fill array
+	j = 0;
 	while (w--)
 	{
 		while (*s == c)
@@ -62,18 +53,20 @@ char	**ft_split(char const *s, char c)
 	return (p);
 }
 
-#if 0
-#include <stdio.h>
-
-int main(void)
+char	**ft_split(char const *s, char c)
 {
-	int i = 0;
-	char **strs = ft_split("      split       this for   me  !       ", ' ');
+	size_t	w;
+	char	**p;
 
-	while (strs[i])
-		printf("ret: \"%s\"\n", strs[i++]);
-	if (strs[i] == NULL)
-		printf("ret: NULL\n");
-	return (0);
+	if (s == NULL || c == '\0' || *s == '\0')
+	{
+		p = malloc(sizeof(char **));
+		p[0] = NULL;
+		return (p);
+	}
+	w = word_count(s, c);
+	p = malloc(sizeof(char *) * (w + 1));
+	if (p == NULL)
+		return (NULL);
+	return (splitter(s, c, p, w));
 }
-#endif
