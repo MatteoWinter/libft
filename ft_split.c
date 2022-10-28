@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:10:14 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/27 23:20:44 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/28 01:24:03 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,16 @@ char	**splitter(const char *s, char c, char **p, size_t w)
 	size_t	i;
 	size_t	j;
 
-	i = 0;
 	j = 0;
 	while (w--)
 	{
+		i = 0;
 		while (*s == c)
 			s++;
 		while (s[i] != c && s[i] != '\0')
 			i++;
 		p[j++] = ft_substr(s, 0, i);
 		s += i;
-		i = 0;
 	}
 	p[j] = NULL;
 	return (p);
