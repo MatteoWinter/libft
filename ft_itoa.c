@@ -6,13 +6,13 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:28:58 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/28 16:20:44 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/10/31 21:39:21 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	int_char_len(int n)
+size_t	ft_int_char_len(int n)
 {
 	size_t	i;
 
@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 	size_t		len;
 
 	if (n)
-		len = int_char_len(n);
+		len = ft_int_char_len(n);
 	else
 		len = 1;
 	return (int_to_str(n, len));
