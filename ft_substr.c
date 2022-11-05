@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 02:28:07 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/27 03:14:33 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/11/05 21:23:08 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*str;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
