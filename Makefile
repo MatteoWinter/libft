@@ -41,11 +41,17 @@ FCN			=	ft_isalpha.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c
 
+FCN_BONUS	=	ft_lstnew.c
+
 FCNF		= ./
 
 SRC			= $(addprefix ${FCNF}, $(FCN))
 
+SRC_BONUS	= $(addprefix ${FCNF}, $(FCN_BONUS))
+
 OBJ			= ${SRC:.c=.o}
+
+OBJ_BONUS	= ${SRC_BONUS:.c=.o}
 
 RM			= rm -f
 
@@ -54,12 +60,17 @@ RM			= rm -f
 
 all		:	${NAME}
 
-${NAME}	:	${OBJ}
-			ar rc ${NAME} ${OBJ}
+#WARNING NAME IS MODIFIED TO INCLUDE BONUS
+
+${NAME}	:	${OBJ} ${OBJ_BONUS}
+			ar rc ${NAME} ${OBJ} ${OBJ_BONUS}
 			ranlib ${NAME}
 
+bonus	:	${OBJ} ${OBJ_BONUS}
+			ar rc ${NAME} ${OBJ} ${OBJ_BONUS}
+			ranlib ${NAME}
 clean 	:
-			${RM} ${OBJ}
+			${RM} ${OBJ} ${OBJ_BONUS}
 
 fclean	:	clean
 			${RM} ${NAME}
@@ -70,4 +81,4 @@ so:
 			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
 			gcc -nostartfiles -shared -o libft.so $(OBJ)
 
-.PHONY	:	all clean fclean re
+.PHONY	:	.c.o all bonus clean fclean re so
