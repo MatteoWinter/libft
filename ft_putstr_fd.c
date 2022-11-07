@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:07:40 by matwinte          #+#    #+#             */
-/*   Updated: 2022/10/31 14:18:54 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/11/07 18:42:39 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	write(fd, s, ft_strlen(s));
 }
