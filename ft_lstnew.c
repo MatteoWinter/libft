@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 23:35:14 by matwinte          #+#    #+#             */
-/*   Updated: 2022/11/06 23:54:31 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/11/07 21:48:00 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*lst;
+	t_list	*node;
 
-	lst = malloc(sizeof(t_list));
-	if (lst == NULL)
+	node = malloc(sizeof(t_list));
+	if (node == NULL)
 		return (NULL);
-	lst->content = content;
-	lst->next = NULL;
-	return (lst);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
