@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:10:14 by matwinte          #+#    #+#             */
-/*   Updated: 2022/11/07 23:59:34 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/11/08 00:24:57 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL || *s == '\0')
 	{
 		p = malloc(sizeof(char **));
+		if (p == NULL)
+			return (NULL);
 		p[0] = NULL;
 		return (p);
 	}
