@@ -86,7 +86,7 @@ fclean	:	clean
 re		:	fclean all
 
 so:
-			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-			gcc -nostartfiles -shared -o libft.so $(OBJ)
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(SRC_BONUS)
+			gcc -nostartfiles -shared -o libft.so $(OBJ) ${OBJ_BONUS}
 
 .PHONY	:	.c.o all bonus clean fclean re so
