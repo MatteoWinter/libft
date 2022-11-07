@@ -6,7 +6,7 @@
 /*   By: matwinte <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:24:30 by matwinte          #+#    #+#             */
-/*   Updated: 2022/11/07 16:33:16 by matwinte         ###   ########.fr       */
+/*   Updated: 2022/11/07 21:36:48 by matwinte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*node;
 
-	if (!del || !*lst)
+	if (!del || !lst || !*lst)
 		return ;
 	while (*lst)
 	{
