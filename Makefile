@@ -68,10 +68,8 @@ RM			= rm -f
 
 all		:	${NAME}
 
-#WARNING NAME IS MODIFIED TO INCLUDE BONUS
-
-${NAME}	:	${OBJ} ${OBJ_BONUS}
-			ar rc ${NAME} ${OBJ} ${OBJ_BONUS}
+${NAME}	:	${OBJ}
+			ar rc ${NAME} ${OBJ}
 			ranlib ${NAME}
 
 bonus	:	${OBJ} ${OBJ_BONUS}
